@@ -1,4 +1,4 @@
 $(function() {
-    new LoginRegisterMask($('.login'), 'login').init();
-    new LoginRegisterMask($('.register'), 'register').init();
+    new loginRegisterView.($('.login'), 'login').init();
+    new loginRegisterView($('.register'), 'register').init();
 })

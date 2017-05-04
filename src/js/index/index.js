@@ -2,7 +2,7 @@ var IndexPage = {
     init: function() {
         var _this = this;
         _this.render();
-        _this.addEvent();
+        _this.bindEvents();
     },
 
     render: function() {
@@ -24,20 +24,18 @@ var IndexPage = {
         }
     },
 
-    addEvent: function() {
-        new LoginRegisterMask($('.login'), 'login').init();
-        new LoginRegisterMask($('.register'), 'register').init();
+    bindEvents: function() {
+        new loginRegisterView($('.login'), 'login').init();
+        new loginRegisterView($('.register'), 'register').init();
 
-        $('.load-more').on('click', function() {
+        $(document).on('click', '.load-more', function(event) {
             var $this = $(this);
             $this.button('loading');
             // ajax
             setTimeout(function() {
                 $this.button('reset');
             }, 2000);
-        });
-
-        $('.like').on('click', function(event) {
+        }).on('click', '.like', function(event) {
             var $this = $(this),
                 $icon = $this.find('.icon'),
                 $num = $this.find('.num'),
@@ -59,6 +57,6 @@ var IndexPage = {
 $(function() {
     IndexPage.init();
     $(window).resize(function(event) {
-        IndexPage.init();
+        IndexPage.render();
     });
 })

@@ -1,0 +1,212 @@
+/* 
+ * 浏览器样式重置，AmazeUI框架样式重置
+ * @author zhangsilei 2017-01-23
+ */
+
+/**************************************** 浏览器样式重置 *********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+button {
+    outline: none;
+    background: none;
+}
+
+
+/**************************************** AmazeUI样式重置 *********************************************/
+
+
+/* 导航条左侧logo */
+
+.am-topbar .am-text-ir {
+    display: block;
+    /*width: 125px;*/
+    width: 4rem;
+    height: 50px;
+    /*margin-right: 10px;*/
+    background: url(../images/ystx_logo.png) no-repeat left center;
+    background-size: 3.5rem 3.5rem;
+    /*background-color: pink;*/
+    /*-webkit-background-size: 125px 24px;*/
+    /*background-size: 125px 24px;*/
+    webkit-background-size: 3.5rem 3.5rem;
+}
+
+
+/* 导航条 */
+
+.am-topbar {
+    margin-bottom: 0;
+    border: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+}
+
+@media only screen and (min-width: 641px) {
+    .am-topbar-nav > li.am-active > a:after {
+        border-bottom-color: #7b4529;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .am-topbar-nav > li.am-active > a,
+    .am-topbar-nav > li.am-active > a:hover,
+    .am-topbar-nav > li.am-active > a:focus {
+        color: #faba50;
+        border-radius: 0;
+        background: none;
+    }
+}
+
+.am-nav > li.am-active > a,
+.am-nav > li.am-active > a:hover,
+.am-nav > li.am-active > a:focus {
+    cursor: default;
+    color: #fff;
+    background-color: #faba50;
+}
+
+
+/* 缩略图 */
+
+img.am-thumbnail {
+    min-height: 10rem;
+    margin-bottom: 0;
+    border: none;
+    background: none;
+}
+
+
+/* 网格 */
+
+[class*='am-u-'] {
+    padding: 0;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .am-thumbnails > li {
+        padding: .75rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .am-thumbnails > li {
+        padding: 1rem;
+    }
+}
+
+
+/* 标题 */
+
+h3 {
+    margin-bottom: 0;
+}
+
+
+/* 内容列表 */
+
+.am-list > li {
+    margin-bottom: 0;
+    border: none;
+}
+
+.am-list-news-default {
+    margin-top: 0;
+}
+
+
+/* 图标 */
+
+.am-icon-thumbs-o-up {
+    vertical-align: middle;
+    color: #777;
+}
+
+
+/* 按钮 */
+
+.am-btn:focus,
+.am-btn:active:focus {
+    outline: none;
+}
+
+.am-btn-primary {
+    border-color: #faba50;
+    background-color: #faba50;
+}
+
+.am-btn-primary:hover,
+.am-btn-primary:focus,
+.am-btn-primary:active,
+.am-btn-primary.am-active,
+.am-dropdown.am-active .am-btn-primary.am-dropdown-toggle {
+    border-color: #faba50;
+    background-color: #faba50;
+}
+
+.am-btn-primary.am-disabled,
+.am-btn-primary[disabled],
+fieldset[disabled] .am-btn-primary,
+.am-btn-primary.am-disabled:hover,
+.am-btn-primary[disabled]:hover,
+fieldset[disabled] .am-btn-primary:hover,
+.am-btn-primary.am-disabled:focus,
+.am-btn-primary[disabled]:focus,
+fieldset[disabled] .am-btn-primary:focus,
+.am-btn-primary.am-disabled:active,
+.am-btn-primary[disabled]:active,
+fieldset[disabled] .am-btn-primary:active,
+.am-btn-primary.am-disabled.am-active,
+.am-btn-primary[disabled].am-active,
+fieldset[disabled] .am-btn-primary.am-active {
+    border-color: #faba50;
+    background-color: #faba50;
+}
+
+.am-btn-default:hover,
+.am-btn-default:focus,
+.am-btn-default:active,
+.am-btn-default.am-active,
+.am-dropdown.am-active .am-btn-default.am-dropdown-toggle {
+    border-color: #d4d4d4;
+}
+
+
+/* 选项卡 */
+
+.am-tabs-default .am-tabs-nav {
+    background-color: #f8f8f8;
+}
+
+.am-tabs-default .am-tabs-nav > .am-active a {
+    color: #faba50;
+    background-color: #f8f8f8;
+}
+
+.am-tabs-default .am-tabs-nav > .am-active a {
+    border-bottom: .1rem solid #faba50;
+}
+
+.am-tabs-bd {
+    border: none;
+}
+
+
+/* 模态窗口 */
+
+.am-modal-bd {
+    padding: 0;
+}

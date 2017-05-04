@@ -1,0 +1,89 @@
+/* 页面base、reset */
+
+h3 {
+    line-height: 2.3rem;
+}
+
+/* 页面布局 */
+
+.content {
+    overflow: hidden;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.left {
+    overflow: hidden;
+    max-width: 75rem;
+    margin-top: 1rem;
+}
+
+.right {
+    max-width: 35rem;
+}
+
+/* 轮播图 */
+
+.am-slider {
+    display: none;
+}
+
+.am-slider img {
+    max-height: 20rem;
+}
+
+
+/* 中间内容 */
+
+.tags {
+    display: none;
+    margin: 1rem;
+}
+
+.tags > a {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    display: inline-block;
+    width: 8rem;
+    height: 2.5rem;
+    margin-right: .7rem;
+    text-align: center;
+    color: #fff;
+    border-radius: .5rem;
+    background: #f37b1d;
+}
+
+.articalList .headImg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.articalList .uname,
+.articalList .num {
+    color: #444;
+}
+
+.articalList .like {
+    padding: .2rem .6rem;
+    border: .1rem solid #999;
+    border-radius: .2rem;
+}
+
+.articalList .poster img {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .6);
+}
+
+.left .load-more {
+    display: block;
+    margin: 1rem auto 2rem;
+}
+
+
+/* 右侧边栏 */
+
+.right .hot li {
+    font-size: 1.6rem;
+    margin-bottom: -1px;
+    border: 1px solid #dedede;
+    border-width: 1px 0;
+}

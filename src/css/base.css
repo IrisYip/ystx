@@ -1,0 +1,46 @@
+/* 
+ * 通用模块样式
+ * @author zhangsilei 2017-01-23
+ */
+
+
+/* 登录注册 */
+
+.m-loginRegister-set,
+input[type='button'].am-btn-block {
+    width: 96%;
+    margin-left: 2%;
+}
+
+[data-am-widget='tabs'] {
+    margin: 0;
+}
+
+[data-am-widget='tabs'] .am-tabs-nav li {
+    width: 50%;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+
+.am-tabs-bd .am-tab-panel {
+    padding: 0;
+}
+
+.am-form-field {
+    width: 96%;
+    margin-left: 2%;
+    padding: .5em 0;
+    text-indent: 1rem;
+}
+
+.m-loginRegister-code {
+    display: inline-block;
+    width: 60%;
+}
+
+.m-loginRegister-codeImg {
+    height: 37px;
+    margin-right: 2%;
+}

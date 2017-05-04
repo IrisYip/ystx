@@ -1,0 +1,27 @@
+.content {
+    background: pink;
+    max-width: 62rem;
+    margin: 0 auto;
+}
+
+.author {
+    background: yellow;
+}
+
+.author > img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.author > div {
+    vertical-align: middle;
+    display: inline-block;
+    background: #fff;
+    /*height: 3.5rem;*/
+}
+
+.author .name,
+.author .name + div {
+    display: block;
+}

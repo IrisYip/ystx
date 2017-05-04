@@ -63,10 +63,15 @@ h3 {
     color: #444;
 }
 
-.articalList .like {
+.articalList .like-btn {
     padding: .2rem .6rem;
     border: .1rem solid #999;
     border-radius: .2rem;
+}
+
+.articalList .like-btn .like-icon-active {
+    /*color: #faba50;*/
+    color: #fff;
 }
 
 .articalList .poster img {

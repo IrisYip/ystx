@@ -9,9 +9,7 @@ var IndexPage = {
         var alHorizontal = 10 * 2,
             lmHorizontal = 5 * 2,
             maxScreenWidth = 1200;
-
         $('.load-more').width($('.articalList').width() - alHorizontal - lmHorizontal);
-
         // 自适应布局
         if ($(window).width() < maxScreenWidth) {
             $('.right').hide();
@@ -35,21 +33,31 @@ var IndexPage = {
             setTimeout(function() {
                 $this.button('reset');
             }, 2000);
-        }).on('click', '.like', function(event) {
+        }).on('click', '.like-btn', function(event) {
             var $this = $(this),
-                $icon = $this.find('.icon'),
+                $icon = $this.find('.like-icon'),
                 $num = $this.find('.num'),
                 animation = 'am-animation-scale-up';
-
-            if ($.AMUI.support.animation) {
-                $icon.addClass(animation)
-                    .one($.AMUI.support.animation.end, function() {
-                        $icon.removeClass(animation);
-                    });
+            if (!$this.data('clicked')) {
+                if ($.AMUI.support.animation) {
+                    $icon.addClass(animation)
+                        .one($.AMUI.support.animation.end, function() {
+                            $icon.removeClass(animation);
+                        });
+                }
+                $icon.addClass('like-icon-active');
+                $num.text($.trim($num.text()) - 0 + 1).addClass('like-icon-active');
+                $this.css({
+                    borderColor: '#f37b1d',
+                    background: '#F37B5A'
+                }).data('clicked', true);
+            } else {
+                layer.open({
+                    content: '赞过了哟',
+                    skin: 'msg',
+                    time: 2
+                });
             }
-            $icon.css('color', '#faba50');
-            $num.text($.trim($num.text()) - 0 + 1).css('color', '#faba50');
-            $this.css('borderColor', '#faba50');
         });
     }
 }

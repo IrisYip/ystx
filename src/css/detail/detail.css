@@ -1,7 +1,8 @@
 .content {
     background: pink;
-    max-width: 62rem;
+    max-width: 90rem;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .author {
@@ -9,8 +10,8 @@
 }
 
 .author > img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
@@ -24,4 +25,8 @@
 .author .name,
 .author .name + div {
     display: block;
+}
+
+.author .name + div {
+    color: #969696;
 }

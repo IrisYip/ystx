@@ -1,36 +1,83 @@
 .content {
-    background: pink;
     max-width: 90rem;
     margin: 0 auto;
     padding: 1rem;
 }
 
-.author {
-    background: yellow;
-}
-
-.author > img {
-    width: 4rem;
-    height: 4rem;
+.content .author > img,
+.user-comments .author > img {
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 50%;
 }
 
-.author > div {
-    vertical-align: middle;
+.content .author > div,
+.user-comments .author > div {
     display: inline-block;
-    background: #fff;
-    /*height: 3.5rem;*/
+    vertical-align: middle;
 }
 
-.author .name,
-.author .name + div {
+.content .name,
+.content .name + div,
+.user-comments .name,
+.user-comments .name + div {
     display: block;
 }
 
-.author .name + div {
+.content .name + div,
+.user-comments .name + div {
     color: #969696;
 }
 
-.artical {
-    
+.user-action {
+    padding: 1.5rem 0;
+    border-top: .1rem solid #f0f0f0;
+}
+
+.user-action .like {
+    display: inline-block;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    border: .1rem solid orange;
+    color: orange;
+    border-radius: 5rem;
+}
+
+.user-action .comment {
+    padding: 3rem 0;
+    background: #F8F8F8;
+    text-align: center;
+    border: .1rem solid #dcdcdc;
+    border-radius: .5rem;
+}
+
+.user-action .comment button {
+    background: #187cb7;
+    border-color: #187cb7;
+}
+
+.user-comments {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.user-comments .intro {
+    background: #F5F5F5;
+}
+
+.user-comments .intro > span {
+    color: #E8705E;
+}
+
+.user-comments .author {
+    padding: 1rem;
+}
+
+.user-comments .author > img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.user-comments .author > div {
+    line-height: 1.6rem;
 }

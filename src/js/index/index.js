@@ -20,12 +20,11 @@ var IndexPage = {
             $('.left').addClass('am-fl').removeAttr('style');
             $('.tags').hide();
         }
+        new loginRegisterView($('.login'), 'login').init();
+        new loginRegisterView($('.register'), 'register').init();
     },
 
     bindEvents: function() {
-        new loginRegisterView($('.login'), 'login').init();
-        new loginRegisterView($('.register'), 'register').init();
-
         $(document).on('click', '.load-more', function(event) {
             var $this = $(this);
             $this.button('loading');

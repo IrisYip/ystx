@@ -5,14 +5,17 @@
 }
 
 .content .author > img,
-.user-comments .author > img {
+.user-comments > .author > img,
+.user-comments .comments .author > img {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%;
 }
 
 .content .author > div,
-.user-comments .author > div {
+.user-comments > .author > .info,
+.user-comments > .author > .action,
+.user-comments .comments .author > div {
     display: inline-block;
     vertical-align: middle;
 }
@@ -20,12 +23,15 @@
 .content .name,
 .content .name + div,
 .user-comments .name,
-.user-comments .name + div {
+.user-comments .name + div,
+.user-comments .author .name,
+.user-comments .author .name + div {
     display: block;
 }
 
 .content .name + div,
-.user-comments .name + div {
+.user-comments .name + div,
+.user-comments .author .name + div {
     color: #969696;
 }
 
@@ -69,15 +75,51 @@
     color: #E8705E;
 }
 
-.user-comments .author {
+.user-comments > .author {
     padding: 1rem;
 }
 
-.user-comments .author > img {
+.user-comments > .author > img,
+.user-comments .comments .author > img {
     width: 3rem;
     height: 3rem;
 }
 
-.user-comments .author > div {
+.user-comments > .author > .info,
+.user-comments > .author > .action,
+ .user-comments .comments .author > div {
     line-height: 1.6rem;
+}
+
+.user-comments > .author .action,
+.user-comments .comments .author .action {
+    height: 1.6rem;
+    color: #bbb;
+}
+
+.user-comments > .author i {
+    cursor: pointer;
+}
+
+/* 自适应布局 */
+.layout-author-img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.user-comments .comments {
+    border-left: .4rem solid #F0F0F1;
+}
+
+.user-comments p {
+    font-size: 1.4rem;
+}
+
+.user-comments textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 71%, .1);
+    font-size: 13px;
 }

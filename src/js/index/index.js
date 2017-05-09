@@ -7,9 +7,15 @@ var IndexPage = {
 
     render: function() {
         var alHorizontal = 10 * 2,
-            lmHorizontal = 5 * 2,
-            maxScreenWidth = 1200;
+            lmHorizontal = 5 * 2;
         $('.load-more').width($('.articalList').width() - alHorizontal - lmHorizontal);
+        this.autoLayout();
+        new loginRegisterView($('.login'), 'login').init();
+        new loginRegisterView($('.register'), 'register').init();
+    },
+
+    autoLayout: function() {
+        var maxScreenWidth = 1200;
         // 自适应布局
         if ($(window).width() < maxScreenWidth) {
             $('.right').hide();
@@ -20,8 +26,6 @@ var IndexPage = {
             $('.left').addClass('am-fl').removeAttr('style');
             $('.tags').hide();
         }
-        new loginRegisterView($('.login'), 'login').init();
-        new loginRegisterView($('.register'), 'register').init();
     },
 
     bindEvents: function() {
@@ -64,6 +68,6 @@ var IndexPage = {
 $(function() {
     IndexPage.init();
     $(window).resize(function(event) {
-        IndexPage.render();
+        IndexPage.autoLayout();
     });
 })
